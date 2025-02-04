@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<div>
+    <label for="applicantId">Applicant ID:</label>
+    <input type="text" id="applicantId" />
+    <button onclick="openForm()">View Form</button>
+</div>
+
+<script>
+    function openForm() {
+        let applicantId = document.getElementById("applicantId").value;
+        if (!applicantId) {
+            alert("Vui lòng nhập Applicant ID!");
+            return;
+        }
+        // Mở tab mới với URL chứa ID
+        window.open(`/applications/${applicantId}`, '_blank');
+    }
+</script>
+</html>

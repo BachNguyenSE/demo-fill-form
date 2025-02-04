@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Error Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .error-container {
+      border: 1px solid red;
+      padding: 20px;
+      display: inline-block;
+      background-color: #ffe6e6;
+      color: #cc0000;
+    }
+    .home-button {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="error-container">
+  <h2>No users found</h2>
+  <p th:text="${errorMessage}"></p>
+  <a href="/applications" class="home-button">Back to Home Page</a>
+</div>
+
+</body>
+</html>
